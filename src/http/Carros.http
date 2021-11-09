@@ -1,0 +1,48 @@
+@baseURL = http://localhost:4005
+@id = 
+
+###
+// GET - Listar todas as categorias
+GET {{baseURL}}/ModelCars
+Content-Type: application/json
+
+###
+// GET-  selecionar atraves de ID
+GET {{baseURL}}/ModelCars/{{id}}
+Content-Type: application/json
+
+###
+// DELETE-  Listar todas as categorias
+DELETE {{baseURL}}/ModelCars/{{id}}
+Content-Type: application/json
+
+###
+// POST - Insere dados
+POST {{baseURL}}/ModelCars
+Content-Type: application/json
+
+{
+    "nome": "Nissan",
+    "modelo": "Fairlady",
+    "categoria": "Esportivo",
+    "nacionalidade": "Japão",
+    "ano": "2002",
+    "preço": "270000",
+    "status": "Ativo estoque"
+}
+
+###
+// PUT - Altera dados
+POST {{baseURL}}/ModelCars
+Content-Type: application/json
+
+{
+    "i_d": "61527677f4d55d4e24392ef2",
+    "nome": "Mitsubishi",
+    "modelo": "Lancer Evolution IX MR",
+    "categoria": "Esportivo",
+    "nacionalidade": "Japão",
+    "ano": "2007",
+    "preço": "400000.00",
+    "status": "Ativo estoque"
+}
